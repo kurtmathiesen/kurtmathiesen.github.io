@@ -1,2 +1,2 @@
 # kurtmathiesen.github.io
-Sider til html
+Dette repository er til html-workshoppen på CP Guldbib
