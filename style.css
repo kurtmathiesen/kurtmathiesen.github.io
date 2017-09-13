@@ -1,9 +1,12 @@
 .box.kolofon > h3 {
-    background-color: #17cc8f;
-    margin-bottom: 0px; }
+    background-color: #17cc62;
+    margin-bottom: 0px;
+	}
 
 .box.kolofon > ul {
-    margin-top: 5px; }
+    margin-top: 5px;
+	}
 
 .kolofon {
-    width: 250px; }
+    width: 250px;
+	}
