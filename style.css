@@ -1,12 +1,33 @@
-.box.kolofon > h3 {
+
+body {
+	font-family; Verdana,Arial,Helvetica,sans-serif;
+	}
+
+#wrapper {
+	max-width: 1200px;
+	display: inline-block;
+	}
+.kolofon {
+    width: 30%;
+	float: left;
+	display: block;
+	}
+.box > h3 {
     background-color: #17cc62;
     margin-bottom: 0px;
 	}
-
-.box.kolofon > ul {
+.box > ul {
     margin-top: 5px;
 	}
-
-.kolofon {
-    width: 250px;
+#indhold {
+	border: 2px solid black;
+	padding: 5px;
+	float: right;
 	}
+dt{
+	font-weight: bold;
+	color: green;
+	font-size: 1.5em;
+	}
+dd{
+		}
