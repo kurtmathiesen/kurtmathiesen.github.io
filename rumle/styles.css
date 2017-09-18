@@ -1,0 +1,11 @@
+a {
+	font-size: 16pt;
+	color: green;
+}
+th {
+	background-color: LightBlue;
+	
+   }
+table, th, td {
+	border: 1px solid black;
+}
