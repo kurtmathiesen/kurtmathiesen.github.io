@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="da_DK">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>CP Guldbib - HTML - Mere CSS</title>
+    <link rel="stylesheet" href="style.css">
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js" type="text/javascript"></script>
+	<script type='text/javascript'>
+	$.get('kolofon.html',function(response){
+		$('#kolofon').html(response); 
+		});
+  </script>
+ 
+ <style>
+ h4 {
+ 	border: 2px solid black;
+	padding: 5px;
+	clear: right;
+	background-color: #fdf5e8;
+	}
+ </style>
+  
+</head>
+
+<body>
+<div id="wrapper">
+<h1>HTML-workshop</h1>
+<div id="kolofon"></div>
+
+<div id="indhold">
+<h3>Lister</h3>
+<ul>
+	<li>sko</li>
+		<ul>
+			<li>sneakers</li>
+			<li>vandrestøvler</li>
+			<li>balletsko</li>
+			<li>sandaler</li>
+		</ul>
+	<li>fisk</li>
+		<ol>
+			<li>torsk</li>
+			<li>sild</li>
+			<li>laks</li>
+			<li>ørred</li>
+		</ol>
+	<li>farver</li>
+	<li>sportsgrene</li>
+	<li>programmeringssprog</li>
+</ul>
+</div>
+
+</div>
+</body>
+</html>
