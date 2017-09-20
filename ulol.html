@@ -9,22 +9,15 @@
 	$.get('kolofon.html',function(response){
 		$('#kolofon').html(response); 
 		});
+	$.get('header.html',function(response){
+		$('#header').html(response); 
+		});
   </script>
- 
- <style>
- h4 {
- 	border: 2px solid black;
-	padding: 5px;
-	clear: right;
-	background-color: #fdf5e8;
-	}
- </style>
-  
 </head>
 
 <body>
 <div id="wrapper">
-<h1>HTML-workshop</h1>
+<div id="header"></div>
 <div id="kolofon"></div>
 
 <div id="indhold">
