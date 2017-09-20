@@ -1,0 +1,22 @@
+﻿h3, h2 {
+	color : blue;
+	}
+
+th {
+	background-color: blue;
+		
+	}
+
+
+	
+table, th, td{
+	border: solid black;
+	}
+	
+td {
+	background-color: #FFB6C1;
+   }
+ h1 {color : #00FA9A;
+    }
+ol, ul {color : #8B008B;
+       }
