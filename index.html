@@ -5,19 +5,20 @@
     <title>CP Guldbib - HTML</title>
     <link rel="stylesheet" href="style.css">
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+	<script type='text/javascript'>
+		$(document).ready(function(){
+			$( "#kolofon" ).load( "kolofon.html" );
+			});
+	</script>
+
 </head>
 
 <body>
-	<script type='text/javascript'>
-   $(document).ready(function(){
-    $( "#kolofon" ).load( "kolofon.html" );
-   });
-  </script>
 <div id="wrapper">
 <h1>HTML-workshop</h1>
 
 
-<div class="kolofon">
+<div id="kolofon">
 </div>
 
 
