@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="da_DK">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>CP Guldbib - HTML</title>
+    <link rel="stylesheet" href="style.css">
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($){
+			$('#kolofon').load('http://guld.kalven.dk/kolofon.html');
+			});
+	</script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+<h1>HTML-workshop</h1>
+
+<div id="kolofon"></div>
+
+
+
+<div id="indhold">
+<h3>Tabeller og Cascading Style Sheets</h3>
+
+
+<table style="width:100%">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td> 
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td> 
+    <td>94</td>
+  </tr>
+</table>
+</div>
+
+</div>
+</body>
+</html>
