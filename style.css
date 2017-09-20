@@ -7,7 +7,7 @@ body {
 	max-width: 1200px;
 	display: inline-block;
 	}
-.kolofon {
+#kolofon {
     width: 30%;
 	float: left;
 	display: block;
