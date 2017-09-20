@@ -31,3 +31,15 @@ dt {
 	}
 dd {
 		}
+		
+table {
+    border-collapse: collapse;
+	border: 2px solid black;
+}
+th {
+    border: 2px solid black;
+    background-color: Peru;
+}
+td {
+    border: 1px solid black;
+}
