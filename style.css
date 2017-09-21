@@ -1,4 +1,3 @@
-
 body {
 	font-family; Verdana,Arial,Helvetica,sans-serif;
 	}
@@ -12,6 +11,11 @@ body {
 	float: left;
 	display: block;
 	}
+#kolofon .box {
+    border: 2px solid black;
+    background-color: azure;
+    margin-bottom: 5px;
+}
 .box > h3 {
     background-color: #17cc62;
     margin-bottom: 0px;
