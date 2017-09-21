@@ -16,9 +16,11 @@ body {
     background-color: azure;
     margin-bottom: 5px;
 }
+
 .box > h3 {
     background-color: #17cc62;
     margin-bottom: 0px;
+	padding-left: 2px;
 	}
 .box > ul {
     margin-top: 5px;
