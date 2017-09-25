@@ -50,3 +50,36 @@ th {
 td {
     border: 1px solid black;
 }
+
+
+/* PICLIST CSS */
+.piclist > * {margin: 0; padding: 0;}
+.piclist > div {
+  margin: 20px;
+  }
+.piclist > ul {
+  list-style-type: none;
+  width: 500px;
+  }
+.piclist > h3 {
+  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+  }
+.piclist > a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+  }
+.piclist > li img {
+  float: left;
+  margin: 0 15px 0 0;
+  }
+.piclist > li p {
+  font: 200 12px/1.5 Georgia, Times New Roman, serif;
+  }
+.piclist > li {
+  padding: 10px;
+  overflow: auto;
+  }
+.piclist > li:hover {
+  background: #eee;
+  cursor: pointer;
+  }
