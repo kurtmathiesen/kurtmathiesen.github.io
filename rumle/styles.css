@@ -9,3 +9,14 @@ th {
 table, th, td {
 	border: 1px solid black;
 }
+/* 
+.minesider > ol, li, a {
+	font-size: 50pt;
+}   
+*/
+.ol_links > li > a, li {
+	font-size: 40pt;
+}
+.ol_links > li {
+	margin-left: 20px;
+}
