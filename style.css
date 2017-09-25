@@ -61,25 +61,29 @@ td {
   list-style-type: none;
   width: 500px;
   }
-.piclist > h3 {
+.piclist > ul > a > li > h3 {
   font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+  margin: 0px;
   }
-.piclist > a {
+.piclist > ul > a {
   color: inherit; /* blue colors for links too */
   text-decoration: inherit; /* no underline */
   }
-.piclist > li img {
+.piclist > ul > a > li img {
   float: left;
   margin: 0 15px 0 0;
   }
-.piclist > li p {
+.piclist > ul > a > li p {
   font: 200 12px/1.5 Georgia, Times New Roman, serif;
+  margin: 0px;
   }
-.piclist > li {
+.piclist > ul > a > li {
   padding: 10px;
   overflow: auto;
   }
-.piclist > li:hover {
+.piclist > ul > a > li:hover {
   background: #eee;
   cursor: pointer;
   }
+  
+  #indhold > span > ul > a:nth-child(1) > li > h3
