@@ -14,9 +14,10 @@ table, th, td {
 	font-size: 50pt;
 }   
 */
-.ol_links > li > a, li {
+.ol_links > li > a {
 	font-size: 40pt;
 }
 .ol_links > li {
 	margin-left: 20px;
+	font-size: 40pt;
 }
