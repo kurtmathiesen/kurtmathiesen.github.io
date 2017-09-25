@@ -51,7 +51,6 @@ td {
     border: 1px solid black;
 }
 
-
 /* PICLIST CSS */
 .piclist > * {margin: 0; padding: 0;}
 .piclist > div {
@@ -85,5 +84,3 @@ td {
   background: #eee;
   cursor: pointer;
   }
-  
-  #indhold > span > ul > a:nth-child(1) > li > h3
