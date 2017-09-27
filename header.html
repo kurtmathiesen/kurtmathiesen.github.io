@@ -1,1 +1,10 @@
+<script type='text/javascript'>
+function swapStyleSheet(sheet){
+document.getElementById('pagestyle').setAttribute('href', sheet);
+	}
+</script>
 <h1><a href="http://guld.kalven.dk">HTML-Workshop</a></h1>
+<button onclick="swapStyleSheet('hannah/hstyles.css')">Hannahs Style Sheet</button>
+<button onclick="swapStyleSheet('rumle/styles.css')">Rumles Style Sheet</button>
+<button onclick="swapStyleSheet('style.css')">Kurts Style Sheet</button>
+<button onclick="swapStyleSheet('none.css')">Ingens Style Sheet</button>

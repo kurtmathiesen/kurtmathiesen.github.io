@@ -12,11 +12,7 @@
 	$.get('header.html',function(response){
 		$('#header').html(response); 
 		});
-
-	function swapStyleSheet(sheet){
-	document.getElementById('pagestyle').setAttribute('href', sheet);
-}
-  </script>
+	</script>
 </head>
 
 <body>
@@ -26,12 +22,6 @@
 <div id="indhold">
 
 <h3>Lister</h3>
-
-<button onclick="swapStyleSheet('hannah/hstyles.css')">Hannahs Style Sheet</button>
-<button onclick="swapStyleSheet('rumle/styles.css')">Rumles Style Sheet</button>
-<button onclick="swapStyleSheet('style.css')">Kurts Style Sheet</button>
-<button onclick="swapStyleSheet('none.css')">Ingens Style Sheet</button>
-
 <p>Lister kan godt være i flere niveauer. Det kan man fx lave ved at lade en liste indeholde en anden liste.<br>
 Herunder er der en liste med to andre lister indsat.</p>
 <ul>
