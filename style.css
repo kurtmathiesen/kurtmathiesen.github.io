@@ -6,6 +6,11 @@ body {
 	max-width: 1200px;
 	display: block;
 	}
+/* START: Header */
+#head_right {
+	float: right;
+	}
+/* SLUT: Header */
 	
 /* START: Venstre kolonne */
 #kolofon {
