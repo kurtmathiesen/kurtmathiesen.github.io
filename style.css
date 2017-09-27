@@ -14,6 +14,7 @@ body {
 	}
 #header_right {
 	float: right;
+	display: none;
 	}
 .css-swap {
 	display: none;
