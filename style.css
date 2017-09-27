@@ -7,6 +7,9 @@ body {
 	display: block;
 	}
 /* START: Header */
+#header.h1 {
+	display: inline-block;
+	}
 #header_right {
 	float: right;
 	}
