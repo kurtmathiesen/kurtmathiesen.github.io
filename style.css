@@ -15,6 +15,9 @@ body {
 #header_right {
 	float: right;
 	}
+.css-swap {
+	display: none;
+	}
 /* SLUT: Header */
 	
 /* START: Venstre kolonne */
