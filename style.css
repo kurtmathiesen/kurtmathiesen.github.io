@@ -6,6 +6,8 @@ body {
 	max-width: 1200px;
 	display: block;
 	}
+	
+/* START: Venstre kolonne */
 #kolofon {
     width: 30%;
 	float: left;
@@ -25,6 +27,8 @@ body {
 .box > ul {
     margin-top: 5px;
 	}
+/* SLUT: Venstre kolonne */
+
 #indhold {
 	border: 2px solid black;
 	padding: 5px;
