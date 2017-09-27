@@ -6,7 +6,7 @@
     <link id="pagestyle" rel="stylesheet" href="style.css">
 	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js" type="text/javascript"></script>
 	<script type='text/javascript'>
-	$.get(window.location.pathname + 'kolofon.html',function(response){
+	$.get('kolofon.html',function(response){
 		$('#kolofon').html(response); 
 		});
 	$.get('header.html',function(response){
