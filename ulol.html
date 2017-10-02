@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <title>CP Guldbib - HTML - Mere CSS</title>
-    <link rel="stylesheet" href="style.css">
+    <link id="pagestyle" rel="stylesheet" href="style.css">
 	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js" type="text/javascript"></script>
 	<script type='text/javascript'>
 	$.get('kolofon.html',function(response){
@@ -12,16 +12,18 @@
 	$.get('header.html',function(response){
 		$('#header').html(response); 
 		});
-  </script>
+	</script>
 </head>
 
 <body>
 <div id="wrapper">
 <div id="header"></div>
 <div id="kolofon"></div>
-
 <div id="indhold">
+
 <h3>Lister</h3>
+<p>Lister kan godt være i flere niveauer. Det kan man fx lave ved at lade en liste indeholde en anden liste.<br>
+Herunder er der en liste med to andre lister indsat.</p>
 <ul>
 	<li>sko</li>
 		<ul>
@@ -41,28 +43,31 @@
 	<li>sportsgrene</li>
 	<li>programmeringssprog</li>
 </ul>
+
+<h3>HTML indhold og styling af lister</h3>
+<p>Lister kan godt indeholde andre html elementer, fx links, overskrifter og billeder som i eksemplet nedenfor. Desuden kan de styles rigtig meget så man ikke umiddelbart tænker over at det en liste.</p>
 <span class="piclist">
   <ul>
     <a href="https://da.wikipedia.org/wiki/Rom"><li>
-      <img src="Rom.jpg" />
+      <img src="images/Rom.jpg" />
       <h3>Rom, Italien</h3>
       <p>Rom er en utrolig smuk by der emmer af liv og historie. Mange steder i byen stikker antikkens gamle Rom frem, og man kan få en fornemmelse af hvordan byen så ud under Romerriget.</p>
     </li></a>
       
     <a href="https://da.wikipedia.org/wiki/Madrid"><li>
-	<img src="Madrid.jpg" />
+	<img src="images/Madrid.jpg" />
       <h3>Madrid, Spanien</h3>
       <p>Madrid er ikke så kendt for sin historie som mange andre europæiske hovedstæder. Til gengæld er det en by der er mindre kulisse og mere tilstedeværelse end store turistrejsemål.</p>
     </li>
 
     <a href="https://da.wikipedia.org/wiki/Amsterdam"><li>
-      <img src="Amsterdam.jpg" />
+      <img src="images/Amsterdam.jpg" />
       <h3>Amsterdam, Holland</h3>
       <p>Amsterdam er kendt for sine kanaler, og det er bestemt fortjent. Kanalerne gør at biler ikke dominerer bybilledet så meget, og det giver mange hygglige stræder og kroge for folk til fods.</p>
     </li>
 
     <a href="https://da.wikipedia.org/wiki/Berlin"><li>
-      <img src="Berlin.jpg" />
+      <img src="images/Berlin.jpg" />
       <h3>Berlin, Tyskland</h3>
       <p>Lorem ipsum dolor sit amet...</p>
     </li>

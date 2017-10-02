@@ -6,8 +6,24 @@ body {
 	max-width: 1200px;
 	display: block;
 	}
+
+/* START: Header */
+#header.h1 {
+	display: inline-block;
+	float: left;
+	}
+#header_right {
+	float: right;
+	display: none;
+	}
+.css-swap {
+	display: none;
+	}
+/* SLUT: Header */
+	
+/* START: Venstre kolonne */
 #kolofon {
-    width: 30%;
+    width: 29%;
 	float: left;
 	display: block;
 	}
@@ -25,6 +41,8 @@ body {
 .box > ul {
     margin-top: 5px;
 	}
+/* SLUT: Venstre kolonne */
+
 #indhold {
 	border: 2px solid black;
 	padding: 5px;
@@ -51,7 +69,6 @@ td {
     border: 1px solid black;
 }
 
-
 /* PICLIST CSS */
 .piclist > * {margin: 0; padding: 0;}
 .piclist > div {
@@ -61,25 +78,27 @@ td {
   list-style-type: none;
   width: 500px;
   }
-.piclist > h3 {
+.piclist > ul > a > li > h3 {
   font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+  margin: 0px;
   }
-.piclist > a {
+.piclist > ul > a {
   color: inherit; /* blue colors for links too */
   text-decoration: inherit; /* no underline */
   }
-.piclist > li img {
+.piclist > ul > a > li img {
   float: left;
   margin: 0 15px 0 0;
   }
-.piclist > li p {
+.piclist > ul > a > li p {
   font: 200 12px/1.5 Georgia, Times New Roman, serif;
+  margin: 0px;
   }
-.piclist > li {
+.piclist > ul > a > li {
   padding: 10px;
   overflow: auto;
   }
-.piclist > li:hover {
+.piclist > ul > a > li:hover {
   background: #eee;
   cursor: pointer;
   }

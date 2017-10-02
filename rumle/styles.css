@@ -9,3 +9,10 @@ th {
 table, th, td {
 	border: 1px solid black;
 }
+.ol_links > li > a {
+	font-size: 40pt;
+}
+.ol_links > li {
+	margin-left: 20px;
+	font-size: 40pt;
+}
