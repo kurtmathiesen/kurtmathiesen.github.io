@@ -9,11 +9,6 @@ th {
 table, th, td {
 	border: 1px solid black;
 }
-/* 
-.minesider > ol, li, a {
-	font-size: 50pt;
-}   
-*/
 .ol_links > li > a {
 	font-size: 40pt;
 }
