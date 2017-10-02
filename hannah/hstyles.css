@@ -4,10 +4,17 @@
 
 th {
 	background-color: blue;
+ 	font-size:20pt;
 		
 	}
+	
+.dyrtabel > tbody, tr, th {
+	background-color: #00ff80;
+	}
 
-
+th.dyrtabel {
+	background-color: #00ff80;
+	}
 	
 table, th, td{
 	border: solid black;
