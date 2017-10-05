@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Prompt</h2>
+
+<button onclick="myFunction()">Start her</button>
+
+<p id="demo">Her kommer der en besked.</p>
+
+<script>
+function myFunction() {
+    var txt;
+    var person = prompt("Hvad er dit navn?:");
+    if (person == null || person == "") {
+        txt = "Brugeren afbrød spørgsmålet.";
+    } else {
+        txt = "Hej " + person + "! Velkommen til min hjemmeside";
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>
