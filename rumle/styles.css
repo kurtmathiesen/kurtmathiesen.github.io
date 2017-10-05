@@ -18,7 +18,8 @@ table, th, td {
 }
 .anekdote {
 	border: 2px solid black; 
-	width:144px; 
+	width:200px; 
 	float:right;
 	background-color:LawnGreen;
+	padding:4px;
 }
