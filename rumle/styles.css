@@ -16,3 +16,13 @@ table, th, td {
 	margin-left: 20px;
 	font-size: 40pt;
 }
+.anekdote {
+	border: 2px solid black; 
+	width:200px; 
+	float:right;
+	background-color:LawnGreen;
+	padding:4px;
+}
+.jolle {
+	background-color: MediumBlue;
+}

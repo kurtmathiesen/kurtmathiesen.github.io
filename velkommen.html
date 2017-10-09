@@ -1,19 +1,7 @@
-ï»¿<html lang="da-dk">
-
-<head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-<title>Rumle</title>
-<link rel="stylesheet" href="styles.css">
-</head>
-
+<!DOCTYPE html>
+<html>
 <body>
 
-<h1>mine sider</h1>
-<ol class="ol_links">
-	<li><a  href="soespejder.html">SÃ¸spejder</a></li>
-	<li><a  href="cirkus.html">Cirkus</a></li>
-</ol>
-<br>
 <h2>JavaScript Prompt</h2>
 
 <button onclick="myFunction()">Start her</button>
@@ -25,16 +13,13 @@ function myFunction() {
     var txt;
     var person = prompt("Hvad er dit navn?:");
     if (person == null || person == "") {
-        txt = "Brugeren afbrÃ¸d spÃ¸rgsmÃ¥let.";
+        txt = "Brugeren afbrød spørgsmålet.";
     } else {
         txt = "Hej " + person + "! Velkommen til min hjemmeside";
     }
     document.getElementById("demo").innerHTML = txt;
 }
 </script>
+
 </body>
-
 </html>
-
-
-
