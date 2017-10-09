@@ -31,6 +31,9 @@ ol, ul {color : #8B008B;
 	color: purple;
 	font-size: 21px;
 }
+.hr > ul{
+	list-style-position:inside;
+}
 
 .oplevelse {
 	font-size: 21px;
