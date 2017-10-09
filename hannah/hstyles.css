@@ -27,3 +27,17 @@ td {
     }
 ol, ul {color : #8B008B;
        }
+.hr > p {
+	color: purple;
+	font-size: 21px;
+}
+
+.oplevelse {
+	font-size: 21px;
+	color: orange;
+	width: 25%;
+	float: left;
+	border: solid black;
+	margin-right: 19px;
+	padding: 4px;
+	}
