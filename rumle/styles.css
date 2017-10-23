@@ -26,3 +26,7 @@ table, th, td {
 .jolle {
 	background-color: MediumBlue;
 }
+.skema {
+	min-width: 550px;
+	max-width: 50%;
+}
