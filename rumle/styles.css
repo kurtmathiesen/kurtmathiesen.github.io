@@ -30,3 +30,37 @@ table, th, td {
 	min-width: 550px;
 	max-width: 50%;
 }
+.ff {
+	background-color: Cyan;
+}
+.historie {
+	background-color: Chartreuse;
+}
+.dansk {
+	background-color: black;
+	color: White;
+}
+.matematik {
+	background-color: blue;
+}
+.engelsk {
+	background-color: Yellow;
+}
+.idræt {
+    background-color: MediumVioletRed;
+}
+.kristendom {
+	background-color: Lime;
+}
+.sløjd {
+	background-color: Peru;
+}
+.nt {
+	background-color: #191970;
+}
+.madkundskab {
+	background-color: YellowGreen;
+}
+.tysk {
+	background-color: Red;
+}
