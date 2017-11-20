@@ -64,3 +64,15 @@ table, th, td {
 .tysk {
 	background-color: Red;
 }
+.frikvater {
+	display: none;
+}
+.ønskeliste {
+	font-size: 30pt;
+	margin-left: 40px;
+}
+.istidblok {
+	border: solid black;
+	width: 300;
+	padding: 6px;
+}
