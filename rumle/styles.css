@@ -67,10 +67,6 @@ table, th, td {
 .frikvater {
 	display: none;
 }
-.ønskeliste {
-	font-size: 30pt;
-	margin-left: 40px;
-}
 .istidblok {
 	border: solid black;
 	width: 300;
@@ -78,4 +74,16 @@ table, th, td {
 }
 .istidblok2 {
 	font-size: 15pt;
+}
+
+
+
+
+
+.ønskeliste {
+	font-size: 30pt;
+	margin-left: 40px;
+}
+.ønskeoverskrift {
+	font-size: 60px;
 }
