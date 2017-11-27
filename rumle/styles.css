@@ -89,10 +89,28 @@ table, th, td {
 }
 .juletraeskant {
 	width: 70%;
-	border: 5px solid green;
+	border: 10px solid green;
 	padding: 10px;
-	background-color: beige;
+	background-color: Red;
 	border-radius: 70px;
 	box-shadow: 17px 25px 16px -6px #777;
 	margin: 35px auto;
+}
+#snowflakeContainer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.snowflake {
+    padding-left: 15px;
+    font-family: Cambria, Georgia, serif;
+    font-size: 14px;
+    line-height: 24px;
+    position: fixed;
+    color: #FFFFFF;
+    user-select: none;
+    z-index: 1000;
+}
+.snowflake:hover {
+    cursor: default;
 }
