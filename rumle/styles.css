@@ -87,3 +87,12 @@ table, th, td {
 .ønskeoverskrift {
 	font-size: 60px;
 }
+.juletraeskant {
+	width: 70%;
+	border: 5px solid green;
+	padding: 10px;
+	background-color: beige;
+	border-radius: 70px;
+	box-shadow: 17px 25px 16px -6px #777;
+	margin: auto;
+}
