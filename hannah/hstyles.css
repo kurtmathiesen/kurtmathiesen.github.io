@@ -80,3 +80,23 @@ ol, ul {color : #8B008B;
 
 .his {background-color: #808000 ; }
 				
+				
+				
+	#snowflakeContainer {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.snowflake {
+	padding-left: 15px;
+	font-family: Cambria, Georgia, serif;
+	font-size: 14px;
+	line-height: 24px;
+	position: fixed;
+	color: #FFFFFF;
+	user-select: none;
+	z-index: 500;
+}
+.snowflake:hover {
+	cursor: default;
+}			
