@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" href="http://www.thesoftwareguy.in/favicon.ico" type="image/x-icon" />
+<!--iOS/android/handheld specific -->
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>Create fireworks with javascript using fireworks.js - thesoftwareguy7</title>
+<link href='http://fonts.googleapis.com/css?family=Fondamento' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/fireworks.css" media="screen" />
+</head>
+<body>
+<div id="container">
+<div id="body">
+ <!--put the fireworks template here-->
+  <div id="fireworks-template">
+    <div id="fw" class="firework"></div>
+    <div id="fp" class="fireworkParticle"><img src="image/particles.gif" alt="" /></div>
+  </div>
+  <div id="fireContainer"></div>
+  <!--put the fireworks template here-->
+  <div class="mainTitle" >Wish you and your family a very happy diwali</div>
+  <div class="grt" > <img src="image/Happy-Diwali-2012.jpg" alt="" width="655" height="471" /> </div>
+  <div class="height30"></div>
+  <article>
+    <div style="width:100%; margin:0 auto; text-align:center;"> <span id="auto_fire"><a href="javascript:void"  onClick="displayFireworks(); return false;" title="Auto Start"  > <img src="image/button8.png" alt="Auto Start" width="200" height="50"> </a></span> <a href="javascript:void"  onClick="var r=4+parseInt(Math.random()*16);for(var i=r; i--;){setTimeout('createFirework(8,14,2,null,null,null,null,null,Math.random()>0.5,true)',(i+1)*(1+parseInt(Math.random()*1000)));}return false;" title="Sequence Explosions"  > <img src="image/button1.png" alt="Sequence Explosions" width="200" height="50"> </a> <a href="javascript:void"  onClick="createFirework(100,100,1,null,50,100,50,50,false,true);return false;" title="Apple Key-esque"  > <img src="image/button2.png" alt="Apple Key-esque" width="200" height="50"> </a> <a href="javascript:void"  onClick="createFirework(11,30,3,4,null,null,null,null,false,true);return false;" title="Standard Circle"  > <img src="image/button3.png" alt="Standard Circle" width="200" height="50"> </a> <a href="javascript:void"  onClick="createFirework(25,187,5,1,null,null,null,null,false,true);return false;" title="Concentric Circles"  > <img src="image/button4.png" alt="Concentric Circles" width="200" height="50"> </a> <a href="javascript:void"  onClick="createFirework(66,139,4,5,1,1,97,96,true,true);return false;" title="Cornered"  > <img src="image/button5.png" alt="Cornered" width="200" height="50"> </a> <a href="javascript:void"  onClick="createFirework(38,38,2,null,49,2,50,100,false,true);return false;" title="Semicircle"  > <img src="image/button6.png" alt="Semicircle" width="200" height="50"> </a> <a href="javascript:void"  onClick="createFirework(100,800,8,5,1,100,50,50,false,false);return false;" title="CPU-heavy"  > <img src="image/button7.png" alt="CPU-heavy" width="200" height="50"> </a> </div>
+  </article>
+  <div class="height30"> </div>
+  <footer>
+    <div class="footerlogo"><a href="http://www.thesoftwareguy.in" target="_blank"><img src="http://www.thesoftwareguy.in/thesoftwareguy-logo-small.png	" width="200" height="47" alt="thesoftwareguy logo" /></a> </div>
+  </footer>
+</div>
+</div>
+<script type="text/javascript" src="js/soundmanager2-nodebug-jsmin.js"></script>
+<script type="text/javascript" src="js/fireworks.js"></script>
+<script>
+var c=0;
+var t;
+var poping=0;
+
+function displayFireworks() {
+	document.getElementById('auto_fire').innerHTML = '<a href="javascript:void"  onClick="stopCount(); return false;" title="Stop"  > <img src="image/button9.png" alt="Stop" width="200" height="50"> ';
+	createFirework(25,187,7,1,null,null,null,null,false,true);
+	t=setTimeout(function(){displayFireworks()},2000);
+}
+
+function doTimer() {
+if (!poping) {
+  poping=1;
+  displayFireworks();
+  }
+}
+
+function stopCount() {
+clearTimeout(t);
+poping=0;
+document.getElementById('auto_fire').innerHTML = '<a href="javascript:void"  onClick="displayFireworks(); return false;" title="Auto Start"  > <img src="image/button8.png" alt="Auto Start" width="200" height="50"> </a>';
+}
+</script>
+</body>
+</html>
