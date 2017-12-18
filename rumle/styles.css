@@ -64,3 +64,75 @@ table, th, td {
 .tysk {
 	background-color: Red;
 }
+.frikvater {
+	display: none;
+}
+.istidblok {
+	border: 10px solid black;
+	width: 500;
+	padding: 50px;
+	height: calc(100vh - 285px);
+	margin: 90px auto;
+	border-radius: 70px;
+	box-shadow: 17px 25px 16px -6px #777;
+}
+.istidblok img {
+	max-width: 500px;
+}
+.istidblok2 {
+	font-size: 15pt;
+}
+.top {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	height: 80px;
+	background: white;
+	text-align: center;
+}
+.top h1{
+	font-size: 40px;
+	margin-bottom: 0px;
+}
+.push {
+	margin-bottom: 30px;
+}
+
+
+
+
+
+.ønskeliste {
+	font-size: 30pt;
+	margin-left: 40px;
+}
+.ønskeoverskrift {
+	font-size: 60px;
+}
+.juletraeskant {
+	width: 70%;
+	border: 10px solid green;
+	padding: 10px;
+	background-color: Red;
+	border-radius: 70px;
+	box-shadow: 17px 25px 16px -6px #777;
+	margin: 35px auto;
+}
+#snowflakeContainer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.snowflake {
+    padding-left: 15px;
+    font-family: Cambria, Georgia, serif;
+    font-size: 14px;
+    line-height: 24px;
+    position: fixed;
+    color: #FFFFFF;
+    user-select: none;
+    z-index: 1000;
+}
+.snowflake:hover {
+    cursor: default;
+}

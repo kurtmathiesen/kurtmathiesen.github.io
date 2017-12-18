@@ -102,3 +102,16 @@ td {
   background: #eee;
   cursor: pointer;
   }
+/* SLUT: Pic List */
+
+
+/* START: Ønskeliste */
+.seddel {
+	border: 20px solid transparent;
+	background-color:beige;
+    border-image-source: url(icon.png);
+	border-image-repeat: repeat;
+	border-radius: 15px 50px 75px;
+	}
+
+/* SLUT: Ønskeliste */

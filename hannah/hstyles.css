@@ -45,10 +45,58 @@ ol, ul {color : #8B008B;
 	padding: 4px;
 	}
 	
-	
-	
-	
-	
-	.tid {
-		background-color: green;
+.tid {
+		background-color: yellow;
 	}
+	
+.geo {
+		background-color: blue;
+}
+
+.bio{
+	background-color: purple;
+}
+.pause {
+	    background-color: red;
+}
+.dan {background-color: #00ffff;
+}
+
+.uuv {background-color: #ff00ff;
+}
+
+.eng {background-color: #cc0052
+}
+
+.mat {background-color: #bf00ff; }
+				
+.idr {background-color: #8699b3;}
+
+.lektier {background-color: #b30086;}
+
+.kri {background-color: #b35900; }
+
+.tys {background-color: #009900; }
+
+.his {background-color: #808000 ; }
+				
+				
+				
+	#snowflakeContainer {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.snowflake {
+	padding-left: 15px;
+	font-family: Cambria, Georgia, serif;
+	font-size: 14px;
+	line-height: 24px;
+	position: fixed;
+	color: #FFFFFF;
+	user-select: none;
+	z-index: 500;
+}
+.snowflake:hover {
+	cursor: default;
+}			
