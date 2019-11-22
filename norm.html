@@ -1,0 +1,50 @@
+<html lang="da-dk">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Ønskeliste</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body style="background-color: beige;">
+<div id="snowflakeContainer">
+    <p class="snowflake">*</p>
+</div>
+
+
+<div class="juletraeskant">
+<h1 class="ønskeoverskrift">Kurts ønsker</h1>
+<ul class="ønskeliste">
+<li>Tøj</li>
+<li>Skjorter</li>
+<li>T-shirts</li>
+<li>Hængekøje - Siesta</li>
+<li>Spil</li>
+<li></li>
+<li></li>
+</ul>
+</div>
+
+
+<audio id="baggrundslyd" loop preload="metadata">
+    <source src="audio0265.ogg" type="audio/ogg">
+    <source src="audio/0265.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>
+  <button id="KMA_mute" type="button" onclick="aud_play_pause()">play/pause</button>
+  <script>
+  function aud_play_pause() {
+    var myAudio = document.getElementById("baggrundslyd");
+    if (myAudio.paused) {
+      myAudio.play();
+    } else {
+      myAudio.pause();
+    }
+  }
+  </script>
+  
+
+<script src="fallingsnow_v6.js"></script>
+</body>
+
+</html>
