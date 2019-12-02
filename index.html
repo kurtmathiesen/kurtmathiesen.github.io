@@ -23,11 +23,11 @@
 </div>
 
 <div class="juletraeskant">
-<h1 class="ønskeoverskrift">Trines <span onclick="myFunction('hemmelig')">ø</span>nsker</h1>
+<h1 class="ønskeoverskrift">Trines <span onclick="toggleVis('hemmelig')">ø</span>nsker</h1>
 <ul class="ønskeliste">
 <li>se Kurts....</li>
 </ul>
-<ul id="hemmelig" style="display:none;" class="ønskeliste">
+<ul id="hemmelig" style="display: none;" class="ønskeliste">
 <li>Sort/cognag-farvet læderbælte</li>
 <li>Halskæde med lille vedhæng</li>
 </ul>
@@ -90,7 +90,7 @@
 
 <script src="fallingsnow_v6.js"></script>
 <script>
-function myFunction(elem) {
+function toggleVis(elem) {
   var x = document.getElementById(elem);
   if (x.style.display === "none") {
     x.style.display = "block";
