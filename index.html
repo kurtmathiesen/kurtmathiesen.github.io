@@ -23,13 +23,13 @@
 </div>
 
 <div class="juletraeskant">
-<h1 class="ønskeoverskrift">Trines ønsker</h1>
+<h1 class="ønskeoverskrift">Trines <span onclick="myFunction('hemmelig')">ø</span>nsker</h1>
 <ul class="ønskeliste">
 <li>se Kurts....</li>
-<--! 
-Sort/cognag-farvet læderbælte
-Halskæde med lille vedhæng
-     -->
+</ul>
+<ul id="hemmelig" class="ønskeliste">
+<li>Sort/cognag-farvet læderbælte</li>
+<li>Halskæde med lille vedhæng</li>
 </ul>
 </div>
 
@@ -89,5 +89,16 @@ Halskæde med lille vedhæng
 </div>
 
 <script src="fallingsnow_v6.js"></script>
+<script>
+function myFunction(elem) {
+  var x = document.getElementById(elem);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
 </body>
 </html>
