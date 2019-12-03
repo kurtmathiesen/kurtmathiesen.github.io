@@ -7,11 +7,11 @@
 }
 .juletraeskant {
 	width: 70%;
-	border: 10px solid green;
+	border: 10px solid #1D6115;
 	padding: 10px;
-	background-color: Red;
+	background-color: #C70C02;
 	border-radius: 70px;
-	box-shadow: 17px 25px 16px -6px #777;
+	box-shadow: 17px 25px 16px -6px #7777778c;
 	margin: 35px auto;
 }
 #snowflakeContainer {
