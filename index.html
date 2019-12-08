@@ -4,6 +4,10 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <title>Ønskeliste</title>
 <link rel="stylesheet" href="styles.css">
+</head>
+
+<body style="background-color: #000033;">
+
 <script>
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
@@ -12,9 +16,7 @@ function getRndInteger(min, max) {
 // Specify the number of snowflakes you want visible
 var numberOfSnowflakes = getRndInteger(350,1350);
 </script>
-</head>
-
-<body style="background-color: #000033;">
+  
 <div style="pointer-events: none;" id="snowflakeContainer">
     <p class="snowflake">*</p>
 </div>
