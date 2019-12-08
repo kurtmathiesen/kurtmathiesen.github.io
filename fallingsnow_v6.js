@@ -19,12 +19,8 @@ var snowflakes = [];
 var browserWidth;
 var browserHeight;
 
-function getRndInteger(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) ) + min;
-}
-
 // Specify the number of snowflakes you want visible
-var numberOfSnowflakes = getRndInteger(350,1350);
+//var numberOfSnowflakes = getRndInteger(350,1350);
 
 // Flag to reset the position of the snowflakes
 var resetPosition = false;
