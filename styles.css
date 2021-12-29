@@ -8,11 +8,11 @@
 a {font-size: 50%;}
 .juletraeskant {
 	width: 70%;
-	border: 10px solid #1D6115;
+	border: 10px solid #0B601C;
 	padding: 10px;
-	background-color: #C70C02;
+	background-color: #B31315;
 	border-radius: 70px;
-	box-shadow: 17px 25px 16px -6px #7777778c;
+	box-shadow: 17px 25px 16px -6px #090F25;
 	margin: 35px auto;
 }
 #snowflakeContainer {
