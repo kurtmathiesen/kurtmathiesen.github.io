@@ -1,0 +1,18 @@
+/*  Code By Webdevtrick ( https://webdevtrick.com )  */
+nav {
+  margin-bottom: 1em !important;
+}
+h1 {
+  color: #ff6d34;
+}
+.cart {
+  box-shadow: 0 0 5px #DDD;
+  padding: 20px;
+}
+.tiny {
+  background-color: #ff6d34;
+}
+#clear:hover {
+  background-color: #ff6d34;
+  color: #fff;
+}
