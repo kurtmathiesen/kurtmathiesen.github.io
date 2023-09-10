@@ -71,6 +71,7 @@ var helpers = {
             name: object.getAttribute('data-name'),
             price: object.getAttribute('data-price'),
             id: object.getAttribute('data-id'),
+            imgsrc: img.scr,
             count: count.value,
             total: parseInt(object.getAttribute('data-price')) * parseInt(count.value)
 
@@ -138,6 +139,7 @@ var cart = {
                 id: item.id,
                 name: item.name,
                 price: item.price,
+                img: item.imgsrc,
                 count: item.count,
                 total: item.price * item.count
             });
