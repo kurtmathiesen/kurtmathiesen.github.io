@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function() {
         helpers.emptyView();
 
     }
-    var products = document.querySelectorAll('.product button');
+    var products = document.querySelectorAll('.product img');
     [].forEach.call(products, function(product) {
 
         product.addEventListener('click', function(e) {
