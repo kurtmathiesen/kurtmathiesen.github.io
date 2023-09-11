@@ -66,13 +66,16 @@ var helpers = {
             patt = new RegExp("^[1-9]([0-9]+)?$");
         count.value = (patt.test(count.value) === true) ? parseInt(count.value) : 1;
 
+        var imageSrc = object.querySelector("img").getAttribute("src");
+
         var item = {
 
             name: object.getAttribute('data-name'),
             price: object.getAttribute('data-price'),
             id: object.getAttribute('data-id'),
+            imageSrc: imageSrc,
             count: count.value,
-            total: parseInt(object.getAttribute('data-price')) * parseInt(count.value)
+            total: parseInt(object.getAttribute('data-price')) * parseInt(count.value),
 
         };
         return item;
@@ -138,6 +141,7 @@ var cart = {
                 id: item.id,
                 name: item.name,
                 price: item.price,
+                imageScr: item.imageSrc,
                 count: item.count,
                 total: item.price * item.count
             });
@@ -206,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
         helpers.emptyView();
 
     }
-    var products = document.querySelectorAll('.product button');
+    var products = document.querySelectorAll('.product img');
     [].forEach.call(products, function (product) {
 
         product.addEventListener('click', function (e) {
