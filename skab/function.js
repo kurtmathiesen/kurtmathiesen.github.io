@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var products = document.querySelectorAll('.product img');
     [].forEach.call(products, function (product) {
 
-        product.addEventListener('click', function (e) {
+        product.addEventListener('touchstart', function (e) {
 
             var item = helpers.itemData(this.parentNode);
             cart.addItem(item);
