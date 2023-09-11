@@ -7,6 +7,37 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/foundation/5.0.2/css/foundation.css'>
 <link rel="stylesheet" href="style.css">
+<style>
+#cartItems {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .panel {
+    position: relative;
+    margin: 10px;
+    text-align: center;
+    background: none;
+  }
+  
+  .panel img {
+    max-width: 100%;
+  }
+  
+  .count {
+    position: absolute;
+    top: 90%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.7); /* Transparent white background */
+    color: rgba(68, 68, 68, 0.582);
+    padding: 10px 10px;
+    border-radius: 50%;
+    font-weight: 500;
+    font-size: 60px; /* Adjust the font size as needed */
+    letter-spacing: -1px;
+  }
+</style>
 </head>
 <body>
 
@@ -97,10 +128,8 @@
 
 </div>
 <script type="text/template" id="cartT">
-  <% _.each(items, function (item) { %> <div class = "panel"> <h3> <%= item.name %> </h3> <img src='<%= item.imageScr %>' alt="<%= item.name %>" /> <span class="label">
-<%= item.count %> piece<% if(item.count > 1)
-{%>s
-<%}%> for <%= item.total %>₹</span > </div>
+  <% _.each(items, function (item) { %> <div class = "panel"> <h3> <%= item.name %> </h3> <img src='<%= item.imageScr %>' alt="<%= item.name %>" /> <span class="count">
+<%= item.count %>stk</span > </div>
 <% }); %>
 </script>
 
