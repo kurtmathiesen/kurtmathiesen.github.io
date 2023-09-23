@@ -71,11 +71,9 @@ var helpers = {
         var item = {
 
             name: object.getAttribute('data-name'),
-            price: object.getAttribute('data-price'),
             id: object.getAttribute('data-id'),
             imageSrc: imageSrc,
             count: count.value,
-            total: parseInt(object.getAttribute('data-price')) * parseInt(count.value),
 
         };
         return item;
@@ -89,18 +87,11 @@ var helpers = {
                 items: items
             });
         this.setHtml('cartItems', compiled);
-        this.updateTotal();
 
     },
     emptyView: function () {
 
         this.setHtml('cartItems', '<p>Add some items to see</p>');
-        this.updateTotal();
-
-    },
-    updateTotal: function () {
-
-        this.setHtml('totalPrice', cart.total + '₹');
 
     }
 
@@ -109,7 +100,6 @@ var helpers = {
 var cart = {
 
     count: 0,
-    total: 0,
     items: [],
     getItems: function () {
 
@@ -121,14 +111,12 @@ var cart = {
         this.items = items;
         for (var i = 0; i < this.items.length; i++) {
             var _item = this.items[i];
-            this.total += _item.total;
         }
 
     },
     clearItems: function () {
 
         this.items = [];
-        this.total = 0;
         storage.clearCart();
         helpers.emptyView();
 
@@ -140,10 +128,8 @@ var cart = {
             this.items.push({
                 id: item.id,
                 name: item.name,
-                price: item.price,
                 imageScr: item.imageSrc,
-                count: item.count,
-                total: item.price * item.count
+                count: item.count
             });
 
             storage.saveCart(this.items);
@@ -154,7 +140,6 @@ var cart = {
             this.updateItem(item);
 
         }
-        this.total += item.price * item.count;
         this.count += item.count;
         helpers.updateView();
 
@@ -186,7 +171,6 @@ var cart = {
             if (object.id === _item.id) {
 
                 _item.count = parseInt(object.count) + parseInt(_item.count);
-                _item.total = parseInt(object.total) + parseInt(_item.total);
                 this.items[i] = _item;
                 storage.saveCart(this.items);
 
@@ -201,16 +185,14 @@ var cart = {
     
             if (id === _item.id) {
                 if (_item.count > 1) {
-                    // If there's more than one of this item, decrement count and total
+                    // If there's more than one of this item, decrement count
                     _item.count--;
-                    _item.total -= _item.price;
                 } else {
                     // If it's the last item, remove it from the items array
                     this.items.splice(i, 1);
                 }
     
                 // Update the cart and save changes
-                this.total -= _item.price;
                 this.count--;
                 storage.saveCart(this.items);
     
@@ -240,11 +222,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var products = document.querySelectorAll('.product img');
     [].forEach.call(products, function (product) {
 
-        product.addEventListener('touchstart', function (e) {
-            var item = helpers.itemData(this.parentNode);
-            cart.addItem(item);
-        });
-
         product.addEventListener('click', function (e) {
             var item = helpers.itemData(this.parentNode);
             cart.addItem(item);
@@ -254,11 +231,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var panels = document.querySelectorAll('.panel img');
     [].forEach.call(panels, function (panel) {
-
-        panel.addEventListener('touchstart', function (e) {
-            var id = this.getAttribute('id');
-            cart.removeItem(id);
-        });
 
         panel.addEventListener('click', function (e) {
             var id = this.getAttribute('id');
