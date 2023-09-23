@@ -229,16 +229,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 
-    var panels = document.querySelectorAll('.panel img');
-    [].forEach.call(panels, function (panel) {
-
-        panel.addEventListener('click', function (e) {
-            var id = this.getAttribute('id');
-            cart.removeItem(id);
-        });
-
-    });
-
     document.querySelector('#clear').addEventListener('click', function (e) {
 
         cart.clearItems();
