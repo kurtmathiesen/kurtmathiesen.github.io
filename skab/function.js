@@ -195,6 +195,33 @@ var cart = {
         }
 
     }
+    removeItem: function (id) {
+        for (var i = 0; i < this.items.length; i++) {
+            var _item = this.items[i];
+    
+            if (id === _item.id) {
+                if (_item.count > 1) {
+                    // If there's more than one of this item, decrement count and total
+                    _item.count--;
+                    _item.total -= _item.price;
+                } else {
+                    // If it's the last item, remove it from the items array
+                    this.items.splice(i, 1);
+                }
+    
+                // Update the cart and save changes
+                this.total -= _item.price;
+                this.count--;
+                storage.saveCart(this.items);
+    
+                // Exit the loop since we found and processed the item
+                break;
+            }
+        }
+    
+        // Update the view
+        helpers.updateView();
+    }
 
 };
 
