@@ -241,11 +241,28 @@ document.addEventListener('DOMContentLoaded', function () {
     [].forEach.call(products, function (product) {
 
         product.addEventListener('touchstart', function (e) {
-
             var item = helpers.itemData(this.parentNode);
             cart.addItem(item);
+        });
 
+        product.addEventListener('click', function (e) {
+            var item = helpers.itemData(this.parentNode);
+            cart.addItem(item);
+        });
 
+    });
+
+    var panels = document.querySelectorAll('.panel img');
+    [].forEach.call(panels, function (panel) {
+
+        panel.addEventListener('touchstart', function (e) {
+            var id = this.getAttribute('id');
+            cart.removeItem(id);
+        });
+
+        panel.addEventListener('click', function (e) {
+            var id = this.getAttribute('id');
+            cart.removeItem(id);
         });
 
     });

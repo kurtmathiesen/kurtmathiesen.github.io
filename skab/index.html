@@ -52,21 +52,6 @@
     <div class="medium-8 columns">
         <h1>Products List</h1>
         <div class="products">
-            <div class="product medium-4 columns" data-name="Vivobook" data-price="50000" data-id="0">
-                <img src="https://webdevtrick.com/wp-content/uploads/vivobook.jpg" alt="" />
-                <h3>Vivobook</h3>
-                <input type="hidden" class="count" value="1" />
-            </div>
-            <div class="product medium-4 columns" data-name="Surface Pro" data-price="85000" data-id="1">
-                <img src="https://webdevtrick.com/wp-content/uploads/surface.jpg" alt="" />
-                <h3>Surface Pro</h3>
-                <input type="hidden" class="count" value="1" />
-            </div>
-            <div class="product medium-4 columns" data-name="Predator" data-price="250000" data-id="2">
-                <img src="https://webdevtrick.com/wp-content/uploads/predator.jpg" alt="" />
-                <h3>Predator</h3>
-                <input type="hidden" class="count" value="1" />
-            </div>
             <div class="product medium-4 columns" data-name="Boxer" data-price="1" data-id="3">
                 <img src="images/Boxer-x.png" alt="" />
                 <h3>Boxer</h3>
@@ -128,7 +113,7 @@
 
 </div>
 <script type="text/template" id="cartT">
-  <% _.each(items, function (item) { %> <div class="panel" id="item.id"> <h3> <%= item.name %> </h3> <img src='<%= item.imageScr %>' alt="<%= item.name %>" /> <span class="count">
+  <% _.each(items, function (item) { %> <div class="panel"> <h3> <%= item.name %> </h3> <img src='<%= item.imageScr %>' id='<%= item.id %>' alt="<%= item.name %>" /> <span class="count">
 <%= item.count %>stk</span > </div>
 <% }); %>
 </script>
