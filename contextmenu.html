@@ -1,0 +1,180 @@
+<!-- contextmenu.html -->
+<style>
+#customContextMenu {
+    display: none;
+    position: absolute;
+    width: auto;
+    max-width: 240px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    z-index: 10000;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+	transform: translateY(-25%);  /* Shift the submenu upwards by half of its height */
+}
+
+#customContextMenu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+#customContextMenu li {
+    padding: 4px 6px 4px 18px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+#customContextMenu li:hover {
+    background-color: #0078d4;
+    color: white;
+}
+
+#customContextMenu li:active {
+    background-color: #005999;
+}
+
+#customContextMenu li.disabled {
+    color: #ccc;
+    cursor: default;
+}
+
+#customContextMenu li.disabled:hover {
+    background-color: transparent;
+}
+
+#customContextMenu li.submenu {
+    position: relative; /* Setting the parent li to have a relative position */
+    color: black;
+}
+
+#customContextMenu li.submenu > ul {
+	position: absolute; /* Sub-menu will have an absolute position */
+    top: 50%;             /* This will now be relative to its parent li */
+    left: 100%;         /* Make it appear to the right side of the parent li */
+    z-index: 2;         /* Ensure it appears on top */
+    border: 1px solid #ccc; /* Optional: to give it a border */
+    background-color: #fff; /* Optional: to give it a background */
+	transform: translateY(-25%);  /* Shift the submenu upwards by half of its height */
+	display: block;  /* Keep the sub-menu always displayed */
+    opacity: 0;      /* Initially hidden */
+    visibility: hidden;  /* Make it not visible and not interactive */
+    transition: opacity 0.2s, visibility 0.2s; /* Add transition for smooth fade out */
+}
+
+#customContextMenu li.submenu:hover > ul {
+    opacity: 1;  /* Make sub-menu fully visible */
+    visibility: visible;  /* Make it visible and interactive */
+    transition-delay: 0s; /* Reset the delay to immediately show the submenu when hovered */
+}
+
+#customContextMenu .arrow {
+    margin-left: 5px;
+}
+
+#customContextMenu .submenu:hover > ul {
+    top: 0;
+    left: 100%;
+	display: block;
+    position: absolute;
+}
+
+#customContextMenu hr.spacer {
+    border: 0;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 2px 2px;
+}
+
+
+</style>
+<div id="customContextMenu">
+    <ul>
+        <li id="boo">Emulate owner</li>
+		<li>FlashOpen&trade; <input type="text" id="fname" name="fname" size="12"></li>
+        <li class="submenu">UTAs<span class="arrow">►</span>
+            <ul>
+                <li onclick="top.openurl('/Apps/app_editapp.jsp?cusAppid=103431&nextlevel=1&dcell=10&currenttab=custab-0')">Submission Manager settings</li>
+                <li onclick="top.openurl('/s_customfields.jsp?nextlevel=1&appid=103431&itemid=103431&entity=24&title=Application');">L1 SubManager</li>
+                <li onclick="top.openurl('/s_customfields.jsp?nextlevel=1&appid=103431&itemid=103431&entity=26&title=Activity');">L2 SubManager</li>
+				<hr class="spacer" />
+                <li onclick="top.openurl('/Apps/app_editapp.jsp?cusAppid=103433&nextlevel=1&dcell=10&currenttab=custab-0');">Programme Manager settings</li>
+                <li onclick="top.openurl('/Apps/app_editapp.jsp?cusAppid=103432&nextlevel=1&dcell=10&currenttab=custab-0');">Evaluation Manager settings</li>
+				<hr class="spacer" />
+                <li onclick="">-vacant-</li>
+                <li onclick="">-vacant-</li>
+				<li onclick="">-vacant-</li>
+            </ul>
+        </li>
+        <li onclick="top.openurl('/s_msgqueue.jsp#custab-1');">Message Queue</li>
+		<li onclick="toggleeditfield(103432,true,0,1)">Config Mode</li>
+        <hr class="spacer" />
+        <li class="submenu">Option 5 <span class="arrow">►</span>
+			<ul>
+				<li>Do this</li>
+				<li>Do that</li>
+				<li class="disabled">Do nothing</li>
+				<li>Do whatever</li>
+				<li>Do some more</li>
+				<li>Do it again</li>
+				<hr class="spacer" />
+				<li>Chill</li>
+				<li>Relax</li>
+			</ul>
+		</li>
+        <li>Option 6</li>
+    </ul>
+</div>
+
+<script type="text/javascript" defer>
+function Kmas() {
+	prompt("Enter application reference");
+}
+function EmulOwner() {
+    var selectedTaskItem = document.querySelector('li.taskitem_selected');
+    if (selectedTaskItem) {
+        var taskItemNumber = selectedTaskItem.id.split('_')[1];
+        var iframeName = 'app_win_' + taskItemNumber;
+        var iframe = document.querySelector('iframe[name=\"' + iframeName + '\"]');
+        if (iframe) {
+            function findOwnerId(context) {
+                var ownerIdElement = context.getElementById('ownerid');
+                if (ownerIdElement) {
+                    return ownerIdElement.value;
+                }
+                return 'No ownerid in this frame';
+            }
+            try {
+                var iframeOwnerId = findOwnerId(iframe.contentWindow.document);
+                top.emulationmode(iframeOwnerId, 0, 'e');
+            } catch (e) {
+                console.error('Error accessing iframe:', e);
+            }
+        } else {
+            console.log('Corresponding iframe not found!');
+        }
+    } else {
+        console.log('No selected taskitem found!');
+    }
+}
+document.addEventListener('DOMContentLoaded', function() {
+    var listItem = document.getElementById('boo');
+    listItem.addEventListener('click', function() {
+        EmulOwner();
+        return false;
+    });
+}
+</script>
+
+
+<div style="display: none">
+Custom Fields:
+	javascript:openurl('/s_customfields_all.jsp');
+Emulate Owner:
+	javascript:(function(){var selectedTaskItem=document.querySelector('li.taskitem_selected');if(selectedTaskItem){var taskItemNumber=selectedTaskItem.id.split('_')[1];var iframeName='app_win_'+taskItemNumber;var iframe=document.querySelector('iframe[name="'+iframeName+'"]');if(iframe){function findOwnerId(context){var ownerIdElement=context.getElementById('ownerid');if(ownerIdElement){return ownerIdElement.value}return 'No ownerid in this frame'}try{var iframeOwnerId=findOwnerId(iframe.contentWindow.document);top.emulationmode(iframeOwnerId,0,'e')}catch(e){console.error('Error accessing iframe:',e)}}else{console.log('Corresponding iframe not found!')}}else{console.log('No selected taskitem found!')}})();
+Open Submission Manager settings:
+	javascript:openurl('/Apps/app_editapp.jsp?cusAppid=103431&nextlevel=1&dcell=10&currenttab=custab-0');
+</div>
